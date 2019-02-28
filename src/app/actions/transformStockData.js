@@ -5,12 +5,19 @@ import {
     getTime12HR
 } from '../constants';
 
+/**
+ * Constant Declarations
+ */
 const aDay = 1000 * 60 * 60 * 24;
 const anHour = 1000 * 60 * 60;
 const aMin = 1000 * 60;
 const aSec = 1000;
 let timeStamp;
 
+/**
+ * function for setting up lastupdated text value
+ * @param: lastUpdatedTimeStamp, currentTimeStamp
+ */ 
 const generateLastUpdatedText = (lastUpdatedTimeStamp, currentTimeStamp) => {
     const diff = currentTimeStamp - lastUpdatedTimeStamp;
     if ((diff / aDay) > 1) {
@@ -22,6 +29,11 @@ const generateLastUpdatedText = (lastUpdatedTimeStamp, currentTimeStamp) => {
     }
 }
 
+/**
+ * function for transforming and updating rootz 
+ * {$liveUpdates} components stocks and maintaining stockHash maps 
+ * @param: liveUpdates : updates fetched from WSocket
+ */
 const updateStocks = liveUpdates => {
     const stocks = appState.get("$liveUpdates").stocks;
     const stockHash = appState.get("stockHash") || {};

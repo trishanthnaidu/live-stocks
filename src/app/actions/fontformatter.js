@@ -5,6 +5,10 @@ import {
     getCellTemplateForFirstUpdate
 } from '../constants.js';
 
+/**
+ * function to provide appropriate formatting of the cells as configured
+ * @param {*} formatObj : object returned from the formatted event in react-data-grid column definition
+ */
 const formatCellFonts = formatObj => {
     const row = formatObj.row;
     if (row.isFirstUpdate) {

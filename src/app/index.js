@@ -9,6 +9,9 @@ import VisualisationLayout from './components/visualisationLayout';
 class liveStockApp extends React.Component {
     constructor(props) {
         super(props);
+        // subscribe component with rootz {$liveUpdates} 
+        // for more information on rootz kindly go through its documentation
+        // link : https://github.com/trishanthnaidu/rootz 
         subscribe({
             name: "liveUpdates",
             scope: this,
@@ -22,8 +25,8 @@ class liveStockApp extends React.Component {
         setLiveUpdates(socket);
     }
     render() {
+        // get rootz context {this returns the currnet state of the component liveUpdates}
         const rtx = appState.get("$liveUpdates");
-
         return (
             <div className="App">
                 <div className="banner-container">
