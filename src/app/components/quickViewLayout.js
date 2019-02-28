@@ -6,7 +6,7 @@ class QuickViewLayout extends React.Component {
     }
     render() {
         const quickViewLayout = this.props.stocks.map((key, itr) => (
-            <div key={itr} className="quick-view-container">
+            <div key={itr} className="quickview-tiles">
                 <span className="ticker-label-wrapper">
                     <div className="ticker-label-text">{key.name}
                     </div>
@@ -15,7 +15,7 @@ class QuickViewLayout extends React.Component {
                 </span>
             </div>
         ));
-        return (<div className="quick-view-wrapper">{quickViewLayout}</div>);
+        return (<div className="quickview-wrapper">{quickViewLayout}</div>);
     }
 }
 

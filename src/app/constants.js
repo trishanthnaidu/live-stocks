@@ -13,11 +13,11 @@ const getMonthShort = timeStamp => (
 )
 
 const getCellTemplateForLoss = formatObj => (
-    <div className="custom-cellRenderer" style={{ "backgroundColor": "#d67979" }}>{formatObj.value}</div>
+    <div className="custom-cellRenderer" style={{ "backgroundColor": "#d62728", "color": "#fff" }}>{formatObj.value}</div>
 )
 
 const getCellTemplateForProfit = formatObj => (
-    <div className="custom-cellRenderer" style={{ "backgroundColor": "#b1d679" }}>{formatObj.value}</div>
+    <div className="custom-cellRenderer" style={{ "backgroundColor": "#2ca02c", "color": "#fff" }}>{formatObj.value}</div>
 )
 
 const getCellTemplateForFirstUpdate = formatObj => (

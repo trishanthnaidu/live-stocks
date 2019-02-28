@@ -50,6 +50,7 @@
     "react-dom": "^16.8.3",
     "react-dom-factories": "^1.0.2",
     "react-grid-layout": "^0.16.6",
+    "react-nvd3": "^0.5.7",
     "react-rootz": "^0.1.7",
     "resolve": "1.10.0",
     "rootz": "^0.2.10",
